@@ -1,4 +1,5 @@
 import { createTaskElement } from "./taskElement.js";
+import { updateCounts } from "../tasks/updateCount.js";
 
 /**
  * Finds the task container element based on task status.
@@ -26,6 +27,7 @@ export function renderTasks(tasks) {
     if (container) {
       const taskElement = createTaskElement(task);
       container.appendChild(taskElement);
+      updateCounts();
     }
   });
 }

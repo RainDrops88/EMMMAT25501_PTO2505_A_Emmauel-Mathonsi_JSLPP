@@ -4,6 +4,7 @@ import {
 } from "../utils/localStorage.js";
 import { clearExistingTasks, renderTasks } from "../ui/render.js";
 import { resetForm } from "./formUtils.js";
+import { updateCounts } from "./updateCount.js";
 
 export function addNewTask() {
   const title = document.getElementById("title-input").value.trim();
@@ -23,7 +24,7 @@ export function addNewTask() {
 
   const updatedTasks = [...tasks, newTask];
   saveTasksToStorage(updatedTasks);
-
+  updateCounts();
   clearExistingTasks();
   renderTasks(updatedTasks);
   resetForm();
