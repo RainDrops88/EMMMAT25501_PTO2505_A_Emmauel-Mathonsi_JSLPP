@@ -33,7 +33,7 @@ body {
    Sidebar Layout
 ================ */
 #side-bar-div {
-  display: none;
+  display: non;
 }
 
 .side-bar {
@@ -98,6 +98,41 @@ h4 {
   font-weight: bold;
   cursor: pointer;
   overflow: hidden; /* Prevents overflowed text/icons from showing */
+}
+
+.dark-mode {
+  margin-top: 95%;
+}
+
+#theme-toggle-btn {
+  display: flex;
+  justify-content: center;
+  background-color: rgba(244, 247, 253, 1);
+  width: 80%;
+  height: 48px;
+  margin-left: 1rem;
+  border: none;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  font-size: 0.9375rem;
+}
+
+#mode-switch {
+  display: flex;
+  justify-content: flex-start;
+  width: 40px;
+  height: 18px;
+  background-color: rgba(99, 95, 199, 1);
+  margin: 14px ;
+  border-radius: 12px;
+  padding: 2px;
+}
+
+.mode-circle {
+  width: 14px;
+  height: 14px;
+  background-color: white;
+  border-radius: 50%;
 }
 
 /* ===============
