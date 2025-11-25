@@ -17,3 +17,21 @@ export function setupSidebarCloseHandler () {
 
     });
 }
+
+export function setupMobileLogoSidebarHandler () {
+  const sidebar = document.getElementById("side-bar-div");
+  const openSidebarBtn = document.getElementById("open-sidebar-btn");
+  const mobileLogoBtn = document.getElementById("mobile-logo-btn");
+    mobileLogoBtn.addEventListener("click", () => {
+        sidebar.style.display = "flex";
+        openSidebarBtn.style.display = "none";
+    });
+}
+
+export function setupMobileSidebarCloseHandler () {
+  const sidebar = document.getElementById("side-bar-div");
+  const closeMobileSidebarBtn = document.getElementById("close-mobile-sidebar-btn");
+    closeMobileSidebarBtn.addEventListener("click", () => {
+        sidebar.style.display = "none";
+    });
+}
