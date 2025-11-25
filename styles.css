@@ -288,8 +288,15 @@ header {
   box-shadow: var(--primary-box-shadow);
   cursor: pointer; /* Indicate it's clickable */
   margin-bottom: 20px;
-  font-size: 0.9375rem;
+  font-size: 1.9375rem;
   font-weight: bold;
+}
+
+/* Ensure title inside task cards uses the primary font color (h4 defaults to secondary color elsewhere) */
+.task-div h4 {
+  color: var(--primary-font-color);
+  font-size: 0.9375rem;
+  letter-spacing: 0;
 }
 
 /* ===============
@@ -391,6 +398,7 @@ form select {
     no-repeat right 0.75rem center;
 
   background-size: 1.4rem;
+  background-color: white;
   padding-right: 1rem;
 }
 
