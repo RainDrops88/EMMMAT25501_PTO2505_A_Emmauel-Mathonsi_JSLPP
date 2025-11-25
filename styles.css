@@ -135,6 +135,28 @@ h4 {
   border-radius: 50%;
 }
 
+.hide-show-btn {
+  display: flex;
+  background-color: rgba(244, 247, 253, 1);
+  color: rgba(99, 95, 199, 1);
+  font-size: 1rem;
+  width: 90%;
+  height: 48px;
+  margin-top: 14px;
+  border: none;
+  border-radius: 0 100px 100px 0;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.btn-name {
+  font-weight: 700;
+  font-size: 0.9375rem;
+  font-weight: bold;
+  overflow: hidden; /* Prevents overflowed text/icons from showing */
+  margin-left: 2rem;
+}
+
 /* ===============
    Main Layout
 ================ */
