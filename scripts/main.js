@@ -10,6 +10,7 @@ import {
   setupMobileLogoSidebarHandler,
   setupMobileSidebarCloseHandler
 } from "./ui/sidebarHandler.js";
+import { setupDarkModeToggle } from "./ui/lightDarkMode.js";
 
 function initTaskBoard() {
   const tasks = loadTasksFromStorage();
@@ -21,6 +22,7 @@ function initTaskBoard() {
   setupSidebarCloseHandler();
   setupMobileLogoSidebarHandler();
   setupMobileSidebarCloseHandler();
+  setupDarkModeToggle();
 }
 
 document.addEventListener("DOMContentLoaded", initTaskBoard);
