@@ -564,6 +564,32 @@ textarea {
 
 /******** Mobile ********/
 @media screen and (max-width: 576px) {
+  .side-bar {
+  position:absolute;
+  justify-content: center;
+  width: 340px;
+  height: 200px;
+  border-radius: 10px;
+  margin-top: 65px;
+  margin: 65px 20px 0 20px;
+  }
+
+  .close-sidebar {
+    display: flex;
+  }
+
+  .hide-show-btn {
+    display: none;
+  }
+
+    .dark-mode {
+    margin-top: 5%;
+  }
+
+  #open-sidebar-btn {
+    display: none;
+  }
+
   .card-column-main {
     grid-template-columns: minmax(
       0,
@@ -588,5 +614,14 @@ textarea {
     padding-right: 14px;
     padding-top: 0;
     padding-bottom: 0;
+  }
+
+  .save-delete-btn {
+    flex-direction: column;
+  }
+
+  .save-btn,
+  .delete-btn {
+    width: 100%;
   }
 }
