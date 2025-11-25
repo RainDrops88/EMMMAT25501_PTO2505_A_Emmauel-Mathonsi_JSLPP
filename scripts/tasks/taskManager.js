@@ -30,3 +30,14 @@ export function addNewTask() {
   resetForm();
   overlay.close();
 }
+
+export function updateTask(updatedTask) {
+  const tasks = loadTasksFromStorage();
+  const found = tasks.some((t) => t.id === updatedTask.id);
+  if (!found) return;
+  const updatedTasks = tasks.map((t) => (t.id === updatedTask.id ? { ...t, ...updatedTask } : t));
+  saveTasksToStorage(updatedTasks);
+  updateCounts();
+  clearExistingTasks();
+  renderTasks(updatedTasks);
+}
