@@ -13,3 +13,38 @@ export function openEditModal(task) {
     let col = task.closest(".column-div").getAttribute("data-status");
     document.getElementById("task-status").value = col;
 }
+
+export function saveEditedTask(taskElement, editedTask) {
+    // Update the taskElement's display based on editedTask
+    const titleElement = taskElement.querySelector("h4");
+    if (titleElement) {
+        titleElement.innerText = editedTask.title;
+    } else {
+        const newTitleElement = document.createElement("h4");
+        newTitleElement.innerText = editedTask.title;
+        taskElement.textContent = "";
+        taskElement.appendChild(newTitleElement);
+    }
+    const descElement = taskElement.querySelector("p");
+    if (descElement) {
+        descElement.innerText = editedTask.description;
+    } else if (editedTask.description) {
+        // If no <p> exists and there's a description, create one
+        const newDescElement = document.createElement("p");
+        newDescElement.innerText = editedTask.description;
+        taskElement.appendChild(newDescElement);
+    }
+    // Update the element dataset for consistency
+    if (taskElement.dataset) {
+        taskElement.dataset.title = editedTask.title;
+        taskElement.dataset.description = editedTask.description;
+        taskElement.dataset.status = editedTask.status;
+    }
+
+    // Move task to new column if status changed
+    const newContainer = document.querySelector(`.column-div[data-status="${editedTask.status}"] .tasks-container`);
+    const currentContainer = taskElement.closest('.tasks-container');
+    if (newContainer && currentContainer !== newContainer) {
+        newContainer.appendChild(taskElement);
+    }
+}
