@@ -48,3 +48,31 @@ export function saveEditedTask(taskElement, editedTask) {
         newContainer.appendChild(taskElement);
     }
 }
+
+export function setupEditTaskModalHandler() {
+    const modal = document.getElementById("task-modal");
+    const saveButton = document.getElementById("save-task-btn");
+    let currentTask = null;
+    document.addEventListener("click", (e) => {
+        if (e.target.classList.contains("task-div") || e.target.closest(".task-div")) {
+            currentTask = e.target.classList.contains("task-div") ? e.target : e.target.closest(".task-div");
+            openEditModal(currentTask);
+        }
+    });
+
+    saveButton.addEventListener("click", () => {
+        if (!currentTask) return;
+        const editedTask = {
+            title: document.getElementById("task-title").value.trim(),
+            description: document.getElementById("task-desc").value.trim(),
+            status: document.getElementById("task-status").value,
+        };
+        saveEditedTask(currentTask, editedTask);
+        // Persist changes to localStorage using the task ID stored in the element's dataset
+        const taskId = parseInt(currentTask.dataset.taskId, 10);
+        if (!Number.isNaN(taskId)) {
+            updateTask({ id: taskId, ...editedTask });
+        }
+        modal.close();
+    });
+}
