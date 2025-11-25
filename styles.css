@@ -157,6 +157,21 @@ h4 {
   margin-left: 2rem;
 }
 
+.show-sidebar {
+  margin-top: 20%;
+}
+
+#open-sidebar-btn {
+  background-color: rgba(99, 95, 199, 1);
+  align-items: center;
+  width: 56px;
+  height: 48px;
+  border-radius: 0 100px 100px 0;
+  font-size: 1.5rem;
+  border: none;
+  cursor: pointer;
+}
+
 /* ===============
    Main Layout
 ================ */
