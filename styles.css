@@ -456,6 +456,31 @@ textarea {
   resize: vertical;
 }
 
+.save-delete-btn {
+  display: flex;
+  margin-top: 24px;
+  gap: 24px;
+}
+
+.save-btn,
+.delete-btn {
+  color: white;
+  width: 50%;
+  height: 40px;
+  border: none;
+  border-radius: 20px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.save-btn {
+  background-color: rgba(99, 95, 199, 1);
+}
+
+.delete-btn {
+  background-color: rgba(234, 85, 85, 1);
+}
+
 /* ========================
    Responsive Styles
 ======================== */
