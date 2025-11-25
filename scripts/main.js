@@ -4,6 +4,12 @@ import {
   setupModalCloseHandler,
   setupNewTaskModalHandler,
 } from "./ui/modalHandlers.js";
+import { 
+  setupSidebarOpenHandler,
+  setupSidebarCloseHandler,
+  setupMobileLogoSidebarHandler,
+  setupMobileSidebarCloseHandler
+} from "./ui/sidebarHandler.js";
 
 function initTaskBoard() {
   const tasks = loadTasksFromStorage();
@@ -11,6 +17,10 @@ function initTaskBoard() {
   renderTasks(tasks);
   setupModalCloseHandler();
   setupNewTaskModalHandler();
+  setupSidebarOpenHandler();
+  setupSidebarCloseHandler();
+  setupMobileLogoSidebarHandler();
+  setupMobileSidebarCloseHandler();
 }
 
 document.addEventListener("DOMContentLoaded", initTaskBoard);
