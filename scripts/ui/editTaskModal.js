@@ -27,12 +27,12 @@ export function saveEditedTask(taskElement, editedTask) {
     }
     const descElement = taskElement.querySelector("p");
     if (descElement) {
-        descElement.innerText = editedTask.description;
-    } else if (editedTask.description) {
-        // If no <p> exists and there's a description, create one
-        const newDescElement = document.createElement("p");
-        newDescElement.innerText = editedTask.description;
-        taskElement.appendChild(newDescElement);
+        if (editedTask.description) {
+            descElement.innerText = editedTask.description;
+        } else {
+            // Remove the <p> if description is cleared
+            descElement.remove();
+        }
     }
     // Update the element dataset for consistency
     if (taskElement.dataset) {
