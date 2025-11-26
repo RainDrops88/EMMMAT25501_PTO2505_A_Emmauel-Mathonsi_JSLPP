@@ -12,6 +12,7 @@ import {
 } from "./ui/sidebarHandler.js";
 import { setupDarkModeToggle } from "./ui/lightDarkMode.js";
 import { setupEditTaskModalHandler } from "./ui/editTaskModal.js"
+import { setupDeleteTaskHandler } from "./ui/deleteTaskHandler.js";
 
 function initTaskBoard() {
   const tasks = loadTasksFromStorage();
@@ -25,6 +26,7 @@ function initTaskBoard() {
   setupMobileSidebarCloseHandler();
   setupDarkModeToggle();
   setupEditTaskModalHandler();
+  setupDeleteTaskHandler();
 }
 
 document.addEventListener("DOMContentLoaded", initTaskBoard);
