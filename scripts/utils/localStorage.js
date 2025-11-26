@@ -1,4 +1,4 @@
-import { initialTasks } from "../../initialData.js";
+import { initialTasks } from "./api.js"
 
 /**
  * Loads tasks from localStorage or initializes with initialTasks.
