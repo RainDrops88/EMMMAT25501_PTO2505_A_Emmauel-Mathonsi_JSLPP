@@ -12,6 +12,8 @@ export function openEditModal(task) {
     document.getElementById("task-desc").value = (descElement && descElement.innerText) || task.dataset.description || "";
     let col = task.closest(".column-div").getAttribute("data-status");
     document.getElementById("task-status").value = col;
+    // set the modal dataset so the delete handler can access the current task id
+    if (modal) modal.dataset.currentTaskId = task.dataset.taskId;
 }
 
 export function saveEditedTask(taskElement, editedTask) {
@@ -49,6 +51,9 @@ export function saveEditedTask(taskElement, editedTask) {
     }
 }
 
+// Note: delete handler moved to `scripts/ui/deleteTaskHandler.js` —
+// The modal only manages edit/save, while delete is handled by the dedicated module.
+
 export function setupEditTaskModalHandler() {
     const modal = document.getElementById("task-modal");
     const saveButton = document.getElementById("save-task-btn");
@@ -75,4 +80,10 @@ export function setupEditTaskModalHandler() {
         }
         modal.close();
     });
+    // Clean up any stored modal dataset when the modal hides
+    if (modal) {
+        modal.addEventListener("close", () => {
+            delete modal.dataset.currentTaskId;
+        });
+    }
 }
