@@ -56,3 +56,19 @@ This project involves **deploying a Kanban app to Netlify**, ensuring the app's 
 - Include a **theme toggle switch** to allow users to switch between dark mode and light mode.
 - The toggle should be functional in both the **desktop sidebar** and the **mobile menu** for consistent theme switching across devices.
 - Ensure all elements of the **Kanban board** are styled appropriately in dark mode, ensuring good contrast and readability.
+
+## Code Quality & Maintainability
+
+- **Break the code into separate modules** with clear responsibilities (e.g., local storage handling, task rendering, modal management) to improve maintainability and scalability.
+- Use **descriptive, meaningful variable and function names** to make the code easy to understand.
+- **Document every major function and module** using **JSDoc comments** to explain the purpose, parameters, and return values of each part of the code.
+
+## Expected Outcome
+
+A fully functional Kanban app that:
+
+- Dynamically fetches and displays tasks.
+- Supports task editing, deletion, and persistent storage through local storage.
+- Has a responsive, mobile-friendly sidebar with a theme toggle switch.
+- App deployed to **Netlify** with a custom, readable URL.
+- Uses modular, well-documented code that is easy to maintain and scale.
