@@ -72,3 +72,16 @@ A fully functional Kanban app that:
 - Has a responsive, mobile-friendly sidebar with a theme toggle switch.
 - App deployed to **Netlify** with a custom, readable URL.
 - Uses modular, well-documented code that is easy to maintain and scale.
+
+## Project Setup Instructions
+
+  1. Clone your starter project folder (or create a new repo).
+  2. Build your site using HTML, CSS and JavaScript.
+  3. Test it on different screen sizes for responsiveness.
+  4. Creates functions to manipulate the HTML and place the given **API** data in correct columns.
+  5. Create functions to add new task and save it in the local storage and re-trieve it when the page is re-opened.
+  6. Click the cards and add task button to ensure that the modal is responding and to add new or edit old task.
+  7. Set up the sidebar to be interactive and responsive to all device.
+  8. Set up the Theme toggler button and the hide or show sidebar button.
+  9. test the the Theme for responsiveness across deferent devices.
+  7. Use Git to track your progress with frequent commits.
