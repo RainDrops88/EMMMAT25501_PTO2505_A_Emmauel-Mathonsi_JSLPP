@@ -59,8 +59,8 @@ This project involves **deploying a Kanban app to Netlify**, ensuring the app's 
 
 ## Links
 
-[View the Video Presentation Here](https://www.veed.io/edit/a07715c9-cf95-4ec3-8f97-c3f16d04213a/video)
-[Netlify link](https://kanban-task-board-portfoilo.netlify.app/)
+- [View the Video Presentation Here](https://www.veed.io/edit/a07715c9-cf95-4ec3-8f97-c3f16d04213a/video)
+- [Netlify link](https://kanban-task-board-portfoilo.netlify.app/)
 
 ## Code Quality & Maintainability
 
