@@ -57,6 +57,11 @@ This project involves **deploying a Kanban app to Netlify**, ensuring the app's 
 - The toggle should be functional in both the **desktop sidebar** and the **mobile menu** for consistent theme switching across devices.
 - Ensure all elements of the **Kanban board** are styled appropriately in dark mode, ensuring good contrast and readability.
 
+## Links
+
+[View the Video Presentation Here](https://www.veed.io/edit/a07715c9-cf95-4ec3-8f97-c3f16d04213a/video)
+[Netlify link](https://kanban-task-board-portfoilo.netlify.app/)
+
 ## Code Quality & Maintainability
 
 - **Break the code into separate modules** with clear responsibilities (e.g., local storage handling, task rendering, modal management) to improve maintainability and scalability.
@@ -72,6 +77,7 @@ A fully functional Kanban app that:
 - Has a responsive, mobile-friendly sidebar with a theme toggle switch.
 - App deployed to **Netlify** with a custom, readable URL.
 - Uses modular, well-documented code that is easy to maintain and scale.
+
 
 ## Project Setup Instructions
 
