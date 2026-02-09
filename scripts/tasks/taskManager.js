@@ -1,7 +1,5 @@
 import {
-  loadTasksFromStorage,
-  saveTasksToStorage,
-} from "../utils/localStorage.js";
+  loadTasksFromStorage, saveTasksToStorage} from "../utils/localStorage.js";
 import { clearExistingTasks, renderTasks } from "../ui/render.js";
 import { resetForm } from "./formUtils.js";
 import { updateCounts } from "./updateCount.js";
