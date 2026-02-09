@@ -13,9 +13,9 @@ export function loadTasksFromStorage() {
       console.error("Error parsing tasks from localStorage:", err);
     }
   }
-
+  
   // If no tasks in storage, initialize with initialTasks
-  localStorage.setItem("tasks", JSON.stringify(fetchData()));
+  
   return fetchData();
 }
 
