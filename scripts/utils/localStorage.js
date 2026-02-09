@@ -39,10 +39,8 @@ export function loadTasksFromStorage() {
     }
   }
 
-  // If no tasks in storage, or parsing failed, or data was malformed, initialize with initialTasks
-  // and immediately save them to ensure localStorage is populated correctly.
-  console.log("Initializing tasks with default data.");
-  saveTasksToStorage(initialTasks); // Ensure initial tasks are saved if not present or corrupted
+  // If no tasks in storage, initialize with initialTasks
+  localStorage.setItem("tasks", JSON.stringify(initialTasks));
   return initialTasks;
 }
 
