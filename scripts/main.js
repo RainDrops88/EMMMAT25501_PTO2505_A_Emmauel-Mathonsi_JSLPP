@@ -1,3 +1,4 @@
+import { fetchData } from "./utils/api.js";
 import { loadTasksFromStorage } from "./utils/localStorage.js";
 import { clearExistingTasks, renderTasks } from "./ui/render.js";
 import {
@@ -15,6 +16,7 @@ import { setupEditTaskModalHandler } from "./ui/editTaskModal.js"
 import { setupDeleteTaskHandler } from "./ui/deleteTaskHandler.js";
 
 function initTaskBoard() {
+  fetchData(); // Ensure initial data is fetched and stored
   const tasks = loadTasksFromStorage();
   clearExistingTasks();
   renderTasks(tasks);
